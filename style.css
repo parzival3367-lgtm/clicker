@@ -84,5 +84,5 @@ transform: scale(1.02)
 
 .next-level-info {
   position: absolute;
-  right: 0;
+  right: -100px;
 }
