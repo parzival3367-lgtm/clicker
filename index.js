@@ -14,8 +14,6 @@ function buyCursor() {
   if (currentBucks >= currentCost) {
     // Deduct the cost and update the display
     sarudiBucks.innerHTML = currentBucks - currentCost;
-    
-    // Optional: Increase the cursor cost for the next purchase
-    // cursorCost.innerHTML = Math.floor(currentCost * 1.15);
+    cursorCost.innerHTML = Math.floor(currentCost * 1.15);
   }
 }
