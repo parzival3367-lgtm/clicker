@@ -85,4 +85,9 @@ transform: scale(1.02)
 .next-level-info {
   position: absolute;
   right: -200px;
+  background-color: burlywood;
+  height: 80px;
+  width: 100px;
+  text-align: center;
+  border: 2px solid black;
 }
