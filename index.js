@@ -9,7 +9,7 @@ function incrementSarudiBuck() {
 function buyCursor() {
   let currentBucks = Number(sarudiBucks.innerHTML);
   let currentCost = Number(cursorCost.innerHTML);
-  let currentLevel = Number(corsorLevel.innerHTML)
+  let currentLevel = Number(cursorLevel.innerHTML)
   
   if (currentBucks >= currentCost) {
     cursorLevel.innerHTML = currentLevel + 1;
