@@ -1,12 +1,10 @@
-let sarudiBucks = 0
+let sarudiBucks = document.querySelector('.sarudi-bucks')
 
 let cursorCost = document.querySelector('.cursor-cost')
 
 function incrementSarudiBuck(){
-  sarudiBucks += 1
-  document.querySelector('.sarudi-bucks').textContent = sarudiBucks
+  sarudiBucks.innerHTML = sarudiBucks.innerHTML + 1
 }
-
 function buyCursor (){
   if (sarudiBucks >= cursorCost.innerHTML){sarudiBucks - cursorCost.innerHTML}
 }
