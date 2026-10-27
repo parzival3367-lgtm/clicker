@@ -4,11 +4,13 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: #EED9C4;
+  color: #326e50;
 }
 
-main {
+.main {
   display: flex;
-  gap: 200px;
+  gap: 150px;
 }
 
 .left h3 {
@@ -23,4 +25,5 @@ main {
 
 .sarudi-image:hover {
   opacity: 0.9;
+  cursor: pointer;
 }

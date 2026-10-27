@@ -1,5 +1,6 @@
-let sarudiBucks = document.querySelector('.sarudi-bucks')
+let sarudiBucks = 0
 
 function incrementSarudiBuck(){
-  sarudiBucks.innerHTML = parseFloat(sarudiBucks.innerHTML) + 1
+  sarudiBucks += 1
+  document.querySelector('.sarudi-bucks').textContent = sarudiBucks
 }
