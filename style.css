@@ -22,7 +22,8 @@ body {
 
 .sarudi-image {
   width: 300px;
-  border-radius: 50px;
+  height: 300px;
+  border-radius: 50%;
 }
 
 .sarudi-image:hover {
