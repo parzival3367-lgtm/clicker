@@ -90,7 +90,7 @@ transform: scale(1.02)
   width: 100px;
   text-align: center;
   border: 2px solid black;
-  display: hidden;
+  display: none;
 }
 
 .upgrade:hover .next-level-info {
