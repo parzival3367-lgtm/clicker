@@ -40,6 +40,7 @@ transform: scale(1.02)
 
 .sarudi-upgrade-image {
   width: 10px;
+  height: 20px;
 }
 
 .upgrade {
@@ -49,4 +50,12 @@ transform: scale(1.02)
   height: 60px;
   border: 4px solid #326e50;
   justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.cost-info {
+  display: flex;
+  gap: 5px; 
+  align-items: center;
 }
