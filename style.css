@@ -6,6 +6,7 @@ body {
   padding: 0;
   background-color: #EED9C4;
   color: #326e50;
+  user-select: none;
 }
 
 .main {
@@ -26,4 +27,26 @@ body {
 .sarudi-image:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+
+.sarudi-image:active {
+opacity: 0.8;
+transform: scale(1.02)
+}
+
+.upgrade-image {
+  width: 50px;
+}
+
+.sarudi-upgrade-image {
+  width: 10px;
+}
+
+.upgrade {
+  display: flex;
+  align-items: center;
+  width: 330px;
+  height: 60px;
+  border: 4px solid #326e50;
+  justify-content: space-between;
 }
