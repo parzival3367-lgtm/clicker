@@ -1,12 +1,56 @@
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 24px;
+  box-sizing: border-box;
   background-color: #EED9C4;
   color: #326e50;
   user-select: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.access-gate {
+  width: min(100%, 360px);
+}
+
+.access-gate h1 {
+  text-align: center;
+}
+
+#access-form {
+  display: grid;
+  gap: 10px;
+}
+
+#access-form input,
+#access-form button {
+  box-sizing: border-box;
+  padding: 10px;
+  font: inherit;
+}
+
+#access-form button {
+  color: #fff;
+  background-color: #326e50;
+  border: 0;
+  cursor: pointer;
+}
+
+#access-form button:disabled {
+  cursor: wait;
+}
+
+#access-status {
+  min-height: 1.5em;
+}
+
+.access-tier {
+  text-align: center;
 }
 
 .main {
