@@ -40,9 +40,12 @@ accessForm.addEventListener('submit', async (event) => {
 let buck = document.querySelector('.sarudi-bucks');
 let cursorCost = document.querySelector('.cursor-cost');
 let cursorLevel = document.querySelector('.cursor-level');
-let cursorIncrease = document.querySelector('.Cursor-increase');
-
-
+let cursorIncrease = document.querySelector('.cursor-increase');
+let pickaxeCost = document.querySelector('.pickaxe-cost');
+let pickaxeLevel = document.querySelector('.pickaxe-level');
+let pickaxeIncrease = document.querySelector('.pickaxe-increase');
+let parsedPickaxeCost = parseFloat(pickaxeCost.innerHTML)
+let parsedPickaxeIncrease = parseFloat(pickaxeIncrease.innerHTML)
 let parsedBuck = parseFloat(buck.innerHTML);
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
@@ -71,4 +74,25 @@ function buyCursor() {
     
  
     sbc += parsedCursorIncrease; 
+}}
+
+function buyPickaxe() {
+
+  if (parsedBuck >= parsedPickaxeCost) { 
+   
+    parsedBuck -= parsedPickaxeCost;
+    buck.innerHTML = Math.round(parsedBuck); 
+    
+    pickaxeLevel.innerHTML++; 
+    
+   
+    parsedPickaxeCost = Math.round(parsedPickaxeCost * 2); 
+    pickaxeCost.innerHTML = parsedPickaxeCost; 
+    
+  
+    parsedPickaxeIncrease = parseFloat((parsedPickaxeIncrease * 1.05).toFixed(2)); 
+    pickaxeIncrease.innerHTML = parsedPickaxeIncrease; 
+    
+ 
+    sbc += parsedPickaxeIncrease; 
 }}
