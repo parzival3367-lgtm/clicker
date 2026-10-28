@@ -53,7 +53,7 @@ let sbc = 1;
 let sbs = 0;
 
 function incrementBucks() {
-  buck = Math.round(parsedBuck += sbc);
+  buck.innerHTML = Math.round(parsedBuck += sbc);
 }
 
 function buyCursor() {
@@ -98,7 +98,7 @@ function buyPickaxe() {
     sbs += parsedPickaxeIncrease; 
 }}
 
-setinterval(() => {
+setInterval(() => {
 parsedBuck += sbs / 10;
 buck.innerHTML = Math.round(parsedBuck)
 }, 100)
