@@ -59,7 +59,7 @@ function buyCursor() {
     parsedBuck -= parsedCursorCost;
     buck.innerHTML = Math.round(parsedBuck); 
     
-    cursorLevel++; 
+    cursorLevel.innerHTML++; 
     
    
     parsedCursorCost = Math.round(parsedCursorCost * 1.5); 
