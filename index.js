@@ -1,24 +1,47 @@
-let sarudiBucks = document.querySelector('.sarudi-bucks');
-let cursorCost = document.querySelector('.cursor-cost');
-let cursorLevel = document.querySelector('.cursor-level');
-let cursorIncrease = document.querySelector('.cursor-SBC-increase')
-let SBC = 1;
+// --- GAME STATE ---
+let sarudiBucks = 0;
+let SBC = 1; // Sarudi Bucks per Click
+
+// Cursor Upgrade State
+let cursorCost = 10; // Set your starting cost here
+let cursorLevel = 0;
+let cursorIncreaseValue = 1; // The base amount a cursor adds
+
+// --- DOM ELEMENTS ---
+const sarudiBucksEl = document.querySelector('.sarudi-bucks');
+const cursorCostEl = document.querySelector('.cursor-cost');
+const cursorLevelEl = document.querySelector('.cursor-level');
+const cursorIncreaseEl = document.querySelector('.cursor-SBC-increase');
+
+// --- FUNCTIONS ---
+
+// Call this whenever you need to update the screen
+function updateDisplay() {
+    sarudiBucksEl.innerHTML = Math.floor(sarudiBucks);
+    cursorCostEl.innerHTML = Math.floor(cursorCost);
+    cursorLevelEl.innerHTML = cursorLevel;
+    cursorIncreaseEl.innerHTML = cursorIncreaseValue.toFixed(1); // Keeps decimals clean
+}
+
 function incrementSarudiBuck() {
-  
-  sarudiBucks.innerHTML = Number(sarudiBucks.innerHTML) + SBC;
+    sarudiBucks += SBC;
+    updateDisplay();
 }
 
 function buyCursor() {
-  let currentBucks = Number(sarudiBucks.innerHTML);
-  let currentCost = Number(cursorCost.innerHTML);
-  let currentLevel = Number(cursorLevel.innerHTML);
-  let currentIncrease = Number (cursorIncrease.innerHTML)
-  if (currentBucks >= currentCost) {
-    cursorLevel.innerHTML = currentLevel + 1;
-    sarudiBucks.innerHTML = currentBucks - currentCost;
-    cursorCost.innerHTML = Math.floor(currentCost * 1.2);
-    currentIncrease = currentIncrease * 1.05;
-    cursorIncrease.innerHTML = currentIncrease;
-    SBC += currentIncrease;
-  }
+    if (sarudiBucks >= cursorCost) {
+        // 1. Deduct cost and level up
+        sarudiBucks -= cursorCost;
+        cursorLevel += 1;
+
+        // 2. Apply the old increase value to SBC before scaling it
+        SBC += cursorIncreaseValue;
+
+        // 3. Scale up the cost and the effectiveness of the NEXT cursor
+        cursorCost = Math.floor(cursorCost * 1.2);
+        cursorIncreaseValue = cursorIncreaseValue * 1.05;
+
+        // 4. Refresh UI
+        updateDisplay();
+    }
 }
