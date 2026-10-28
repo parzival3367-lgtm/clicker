@@ -53,7 +53,7 @@ let sbc = 1;
 let sbs = 0;
 
 function incrementBucks() {
-  buck.innerHTML = Math.round(parsedBuck += sbc);
+  buck = Math.round(parsedBuck += sbc);
 }
 
 function buyCursor() {
