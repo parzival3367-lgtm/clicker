@@ -11,25 +11,19 @@ let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 let sbc = 1;
 
 function incrementBucks() {
-  parsedBuck += sbc;
-  buck.innerHTML = Math.round(parsedBuck);
+  buck.innerHTML = Math.round(parsedBuck += sbc);
 }
 
 function buyCursor() {
-  parsedBuck = parseFloat(buck.innerHTML);
-  parsedCursorCost = parseFloat(cursorCost.innerHTML);
 
   if (parsedBuck >= parsedCursorCost) {
     parsedBuck -= parsedCursorCost;
     buck.innerHTML = parsedBuck;
 
-    let currentLevel = parseInt(cursorLevel.innerHTML) || 0;
-    cursorLevel.innerHTML = currentLevel + 1;
+    cursorLevel ++;
 
-    parsedCursorIncrease = parseFloat((parsedCursorIncrease * 1.03).toFixed(2));
+    parsedCursorIncrease = (parsedCursorIncrease * 1.03).toFixed(2);
     cursorIncrease.innerHTML = parsedCursorIncrease;
-
-
     sbc += parsedCursorIncrease;
   }
 }
