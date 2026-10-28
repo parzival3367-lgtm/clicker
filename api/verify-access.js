@@ -4,7 +4,7 @@ const ACCESS_TIERS = [
   { name: 'basic', env: 'ACCESS_KEY_BASIC' },
   { name: 'pro', env: 'ACCESS_KEY_PRO' },
   { name: 'OG', env: 'ACCESS_KEY_OG' },
-  { name: 'dev', env: 'ACCESS_KEY_ADMIN' }
+  { name: 'dev', env: 'ACCESS_KEY_DEV' }
 ];
 
 function hash(value) {
