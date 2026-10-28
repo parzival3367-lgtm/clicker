@@ -2,8 +2,9 @@ import { createHash, timingSafeEqual } from 'node:crypto';
 
 const ACCESS_TIERS = [
   { name: 'basic', env: 'ACCESS_KEY_BASIC' },
-  { name: 'premium', env: 'ACCESS_KEY_PREMIUM' },
-  { name: 'admin', env: 'ACCESS_KEY_ADMIN' }
+  { name: 'pro', env: 'ACCESS_KEY_PRO' },
+  { name: 'OG', env: 'ACCESS_KEY_OG' },
+  { name: 'dev', env: 'ACCESS_KEY_ADMIN' }
 ];
 
 function hash(value) {
