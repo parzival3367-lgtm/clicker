@@ -50,6 +50,7 @@ let parsedBuck = parseFloat(buck.innerHTML);
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 let sbc = 1;
+let sbs = 0;
 
 function incrementBucks() {
   buck.innerHTML = Math.round(parsedBuck += sbc);
@@ -94,5 +95,10 @@ function buyPickaxe() {
     pickaxeIncrease.innerHTML = parsedPickaxeIncrease; 
     
  
-    sbc += parsedPickaxeIncrease; 
+    sbs += parsedPickaxeIncrease; 
 }}
+
+setinterval(() => {
+parsedBuck += sbs;
+buck.innerHTML = Math.round(parsedBuck)
+}, 1000)
