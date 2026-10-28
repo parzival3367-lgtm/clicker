@@ -21,7 +21,8 @@ function buyCursor() {
     buck.innerHTML = parsedBuck;
 
     cursorLevel ++;
-
+    parsedCursorCost = parsedCursorCost * 1.5;
+    cursorCost.innerHTML = parsedCursorCost;
     parsedCursorIncrease = (parsedCursorIncrease * 1.03).toFixed(2);
     cursorIncrease.innerHTML = parsedCursorIncrease;
     sbc += parsedCursorIncrease;
