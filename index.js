@@ -10,7 +10,7 @@ let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 let sbc = 1;
 
-function incrementBuck() {
+function incrementBucks() {
   parsedBuck += sbc;
   buck.innerHTML = Math.round(parsedBuck);
 }
