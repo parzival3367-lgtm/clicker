@@ -99,6 +99,6 @@ function buyPickaxe() {
 }}
 
 setinterval(() => {
-parsedBuck += sbs;
+parsedBuck += sbs / 10;
 buck.innerHTML = Math.round(parsedBuck)
-}, 1000)
+}, 100)
