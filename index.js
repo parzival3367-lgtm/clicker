@@ -16,15 +16,21 @@ function incrementBucks() {
 
 function buyCursor() {
 
-  if (parsedBuck >= parsedCursorCost) {
+  if (parsedBuck >= parsedCursorCost) { 
    
-    buck.innerHTML = Math.round(parsedBuck -= parsedCursorCost);
-
-    cursorLevel ++;
-    parsedCursorCost = parsedCursorCost * 1.5;
-    cursorCost.innerHTML = parsedCursorCost;
-    parsedCursorIncrease = (parsedCursorIncrease * 1.03).toFixed(2);
-    cursorIncrease.innerHTML = parsedCursorIncrease;
-    sbc += parsedCursorIncrease;
-  }
-}
+    parsedBuck -= parsedCursorCost;
+    buck.innerHTML = Math.round(parsedBuck); 
+    
+    cursorLevel++; 
+    
+   
+    parsedCursorCost = Math.round(parsedCursorCost * 1.5); 
+    cursorCost.innerHTML = parsedCursorCost; 
+    
+  
+    parsedCursorIncrease = parseFloat((parsedCursorIncrease * 1.03).toFixed(2)); 
+    cursorIncrease.innerHTML = parsedCursorIncrease; 
+    
+ 
+    sbc += parsedCursorIncrease; 
+}}
