@@ -1,10 +1,10 @@
-// Select DOM elements (added quotes to selectors)
+
 const buck = document.querySelector('.sarudi-bucks');
 const cursorCost = document.querySelector('.cursor-cost');
 const cursorLevel = document.querySelector('.cursor-level');
 const cursorIncrease = document.querySelector('.Cursor-increase');
 
-// Parse initial values
+
 let parsedBuck = parseFloat(buck.innerHTML);
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
@@ -17,12 +17,12 @@ function incrementBucks() {
 function buyCursor() {
 
   if (parsedBuck >= parsedCursorCost) {
-    parsedBuck -= parsedCursorCost;
-    buck.innerHTML = parsedBuck;
+   
+    buck.innerHTML = Math.round(parsedBuck -= parsedCursorCost);
 
     cursorLevel ++;
     parsedCursorCost = parsedCursorCost * 1.5;
-    cursorCost.innerHTML = parsedCursorCost;
+    cursorCost.innerHTML = Math.round(parsedCursorCost);
     parsedCursorIncrease = (parsedCursorIncrease * 1.03).toFixed(2);
     cursorIncrease.innerHTML = parsedCursorIncrease;
     sbc += parsedCursorIncrease;
