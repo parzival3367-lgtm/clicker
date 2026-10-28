@@ -1,8 +1,8 @@
 
-const buck = document.querySelector('.sarudi-bucks');
-const cursorCost = document.querySelector('.cursor-cost');
-const cursorLevel = document.querySelector('.cursor-level');
-const cursorIncrease = document.querySelector('.Cursor-increase');
+let buck = document.querySelector('.sarudi-bucks');
+let cursorCost = document.querySelector('.cursor-cost');
+let cursorLevel = document.querySelector('.cursor-level');
+let cursorIncrease = document.querySelector('.Cursor-increase');
 
 
 let parsedBuck = parseFloat(buck.innerHTML);
