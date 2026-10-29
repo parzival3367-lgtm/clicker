@@ -50,7 +50,8 @@ let parsedBuck = parseFloat(buck.innerHTML);
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 let sbc = 1;
-let sbs = 0;
+let sbs = parseFloat(document.querySelector('.bucks-per-second'));
+
 
 function incrementBucks() {
   buck.innerHTML = Math.round(parsedBuck += sbc);
