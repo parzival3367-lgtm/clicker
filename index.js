@@ -50,7 +50,8 @@ let parsedBuck = parseFloat(buck.innerHTML);
 let parsedCursorCost = parseFloat(cursorCost.innerHTML);
 let parsedCursorIncrease = parseFloat(cursorIncrease.innerHTML);
 let sbc = 1;
-let sbs = parseFloat(document.querySelector('.bucks-per-second'));
+let sbs = document.querySelector('.bucks-per-second');
+let parsedSbs = parseFloat(sbs.innerHTML);
 
 
 function incrementBucks() {
@@ -100,7 +101,7 @@ function buyPickaxe() {
 }}
 
 setInterval(() => {
-parsedBuck += sbs / 10;
+parsedBuck += parsedSbs / 10;
 buck.innerHTML = Math.round(parsedBuck)
-sbs.innerHTML = sbs;
+sbs.innerHTML = Math.round(parsedSbs);
 }, 100)
