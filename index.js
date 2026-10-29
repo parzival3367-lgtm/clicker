@@ -97,7 +97,7 @@ function buyPickaxe() {
     pickaxeIncrease.innerHTML = parsedPickaxeIncrease; 
     
  
-    sbs += parsedPickaxeIncrease; 
+    parsedSbs += parsedPickaxeIncrease; 
 }}
 
 setInterval(() => {
