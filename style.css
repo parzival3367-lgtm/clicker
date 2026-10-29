@@ -27,6 +27,10 @@ body {
   gap: 10px;
 }
 
+#access-demo {
+  user-select: all;
+}
+
 #access-form input,
 #access-form button {
   box-sizing: border-box;
